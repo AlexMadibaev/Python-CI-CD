@@ -1,0 +1,6 @@
+text = str(input("Введите текст"))
+t2b = bin(int.from_bytes(text.encode(), 'big'))
+print(t2b)
+n = int(t2b, 2)
+b2t = n.to_bytes((n.bit_length() + 7) // 8, 'big').decode()
+print(b2t)
